@@ -35,6 +35,9 @@ gem 'factory_girl_rails', '~> 4.0'
 # create sample data
 gem 'faker'
 
+# deploying cron jobs
+gem 'whenever', :require => false
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

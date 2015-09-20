@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe User do 
  
-  describe "User Sign up" do 
+  describe "User Sign up Validation" do 
  
 
   	it "create a new user with username" do 
