@@ -1,0 +1,8 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<h1>We will create <%= current_user.username %>'s new ToDo List</h1>
+			<%= render partial: 'form', locals: { item: @item } %>
+ 		</div>
+ 	</div>
+ </div>

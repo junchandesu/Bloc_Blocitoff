@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
 
 	validates :password, length: { minimum: 6 }
 	validates :username, presence: true, length: { maximum: 20 }, uniqueness: true
+
+	has_many :items
 end

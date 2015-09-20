@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(params.require(:user).permit(:username, :email, :password, :password_confirmation)
-)
-
+  	@user = User.new(params_user)
   	if @user.save
   		session[:user_id] = @user.id 
   		flash[:notice] = "You are now registered."
@@ -14,8 +12,17 @@ class UsersController < ApplicationController
   	else
   		flash[:error] = "Error signing up."
   		render :new
-  	end
-
-  	
+  	end  	
   end
+
+  def show
+    @user = User.find(params[:id])
+    @items = @user.items
+   end
+
+   private
+
+   def params_user
+    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+   end
 end

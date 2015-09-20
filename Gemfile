@@ -32,6 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 # object creation in test
 gem 'factory_girl_rails', '~> 4.0'
 
+# create sample data
+gem 'faker'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
